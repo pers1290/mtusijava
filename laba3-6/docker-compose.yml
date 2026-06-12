@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: spring_lab4_postgres
+    environment:
+      POSTGRES_DB: spring3
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 559394
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
